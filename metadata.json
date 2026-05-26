@@ -1,0 +1,6 @@
+{
+  "name": "BuildMind AI",
+  "description": "An interactive, powerful developer assistant and AI-powered playground featuring code generation, roadmaps, complexity analyzers, frontend rendering, and more, integrated with the Gemini API.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
