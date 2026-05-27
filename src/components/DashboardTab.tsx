@@ -13,6 +13,7 @@ import {
   CheckCircle2
 } from 'lucide-react';
 import { SavedSnippet } from '../types';
+import doneImg from '../assets/done.png';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -95,18 +96,12 @@ export default function DashboardTab({
           <p className="text-slate-400 text-xs md:text-sm leading-relaxed mb-6 font-light">
             Build modern responsive frontends, generate optimized code structures, estimate Big O complexity, map career pathways, and generate mock services in seconds.
           </p>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-3 w-full">
             <button
               onClick={() => onSelectTab('frontend')}
-              className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-xs font-semibold text-white transition-all shadow-lg shadow-blue-500/10 active:scale-[0.98] border border-blue-400/10 cursor-pointer"
+              className="w-full sm:w-auto px-8 py-3 rounded-xl bg-gradient-to-r from-[#7c3aed] to-[#3b82f6] hover:from-[#6d28d9] hover:to-[#2563eb] text-xs font-bold text-white transition-all shadow-lg shadow-purple-650/20 active:scale-[0.98] border border-white/10 cursor-pointer text-center"
             >
               Start Coding
-            </button>
-            <button
-              onClick={() => onSelectTab('complexity')}
-              className="px-5 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-xs font-semibold text-slate-300 hover:text-white transition-all border border-white/10 active:scale-[0.98] cursor-pointer"
-            >
-              Complexity Check
             </button>
           </div>
         </div>
@@ -123,10 +118,9 @@ export default function DashboardTab({
             <div className="absolute inset-4 bg-gradient-to-br from-blue-550 to-[#8b5cf6] rounded-full blur-[35px] opacity-25 animate-pulse"></div>
             
             <img
-              src="https://cdn3d.iconscout.com/3d/premium/thumb/boy-doing-thumbs-up-sign-5182173-4333649.png"
+              src={doneImg}
               alt="3D developer character avatar thumbs up"
-              className="w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 lg:w-52 lg:h-52 object-contain relative z-10 drop-shadow-[0_15px_30px_rgba(0,0,0,0.55)] transition-all duration-300 hover:scale-[1.07] hover:rotate-3 cursor-pointer select-none"
-              referrerPolicy="no-referrer"
+              className="w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 object-cover object-center relative z-10 drop-shadow-[0_15px_30px_rgba(0,0,0,0.55)] transition-all duration-300 hover:scale-[1.07] hover:rotate-3 cursor-pointer select-none"
             />
           </motion.div>
         </div>

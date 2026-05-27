@@ -26,6 +26,8 @@ import AlgorithmTraceTab from './components/AlgorithmTraceTab';
 import ApiMockTab from './components/ApiMockTab';
 import ChatsTab from './components/ChatsTab';
 import ParticleBackground from './components/ParticleBackground';
+import Footer from './components/Footer';
+import logo from './assets/logo.png';
 
 import { ToolTab, SavedSnippet, ChatMessage } from './types';
 import { SignedIn, SignedOut, SignInButton, SignOutButton, useUser } from '@clerk/clerk-react';
@@ -245,8 +247,8 @@ export default function App() {
           <aside className="w-72 bg-[#050507] border-r border-white/[0.04] shrink-0 hidden md:flex flex-col h-screen sticky top-0">
             {/* Brand Banner matching the mock layout exactly */}
             <div className="px-6 py-6 border-b border-white/[0.05] flex items-center gap-4 bg-transparent z-10 shrink-0">
-              <div className="w-[44px] h-[44px] rounded-2xl bg-gradient-to-br from-[#7c3aed] to-[#3b82f6] flex items-center justify-center border border-white/10 shadow-lg shadow-purple-950/20">
-                <span className="text-xl select-none leading-none transform -rotate-12">🚀</span>
+              <div className="w-[44px] h-[44px] rounded-2xl bg-gradient-to-br from-[#7c3aed] to-[#3b82f6] flex items-center justify-center border border-white/10 shadow-lg shadow-purple-950/20 overflow-hidden">
+                <img src={logo} alt="BuildMind Logo" className="w-full h-full object-contain p-1.5" />
               </div>
               <div className="flex flex-col text-left">
                 <h1 className="text-[17px] font-extrabold text-white tracking-tight leading-none">BuildMind AI</h1>
@@ -303,8 +305,8 @@ export default function App() {
             <div className="flex items-center gap-6">
               {activeTab === 'home' ? (
                 <div className="flex items-center gap-3 pr-6 border-r border-white/10">
-                  <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#7c3aed] to-[#3b82f6] flex items-center justify-center border border-white/10 shadow-md">
-                    <span className="text-base select-none">🤖</span>
+                  <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#7c3aed] to-[#3b82f6] flex items-center justify-center border border-white/10 shadow-md overflow-hidden">
+                    <img src={logo} alt="BuildMind Logo" className="w-full h-full object-contain p-1" />
                   </div>
                   <div className="flex flex-col text-left">
                     <span className="text-sm font-extrabold text-white leading-none tracking-tight">BuildMind AI</span>
@@ -521,6 +523,11 @@ export default function App() {
                 chatLoading={chatLoading}
                 onClearChat={handleClearChatMessageHistory}
               />
+            )}
+
+            {/* Platform footer matching landing pages */}
+            {activeTab === 'home' && (
+              <Footer onSelectTab={setActiveTab} />
             )}
           </main>
         </div>
