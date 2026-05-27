@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { 
-  Github, 
-  Twitter, 
-  Linkedin, 
-  Mail, 
-  ArrowRight, 
-  Globe, 
-  Terminal, 
-  Heart, 
-  ExternalLink 
+import {
+  Github,
+  Twitter,
+  Linkedin,
+  Mail,
+  ArrowRight,
+  Globe,
+  Heart,
+  ExternalLink
 } from 'lucide-react';
 import logo from '../assets/logo.png';
 
@@ -43,14 +42,14 @@ export default function Footer({ onSelectTab }: FooterProps) {
     <footer className="relative mt-32 border-t border-white/[0.05] bg-[#070709]/80 backdrop-blur-xl z-20 overflow-hidden -mx-6 -mb-6">
       {/* Top Gradient Border Line */}
       <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-purple-500/50 to-blue-500/50" />
-      
+
       {/* Background Decorative Glow */}
       <div className="absolute bottom-0 left-1/4 w-[300px] h-[300px] bg-purple-500/5 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute top-12 right-1/4 w-[350px] h-[350px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 py-16 md:py-20 relative">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
-          
+
           {/* Brand and Description (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
             <div className="flex items-center gap-3">
@@ -66,7 +65,7 @@ export default function Footer({ onSelectTab }: FooterProps) {
                 </span>
               </div>
             </div>
-            
+
             <p className="text-slate-400 text-sm leading-relaxed max-w-sm font-light">
               Transforming code generation, system architecture, learning curricula, and algorithm exploration with highly optimized generative AI models.
             </p>
@@ -75,10 +74,9 @@ export default function Footer({ onSelectTab }: FooterProps) {
             <div className="flex items-center gap-3.5 pt-2">
               {[
                 { icon: Github, href: 'https://github.com/Chetanjanjalkar791/-BuildMind-AI-Platform', label: 'GitHub' },
-                { icon: Twitter, href: '#', label: 'Twitter' },
-                { icon: Linkedin, href: '#', label: 'LinkedIn' },
+                { icon: Twitter, href: 'https://x.com/chetanjanjalkar', label: 'Twitter' },
+                { icon: Linkedin, href: 'https://www.linkedin.com/in/chetan-janjalkar-2a92a432b/', label: 'LinkedIn' },
                 { icon: Globe, href: '#', label: 'Website' },
-                { icon: Terminal, href: '#', label: 'Console' },
               ].map((social, i) => (
                 <motion.a
                   key={i}

@@ -86,10 +86,6 @@ export default function DashboardTab({
         <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-[#8b5cf6]/5 rounded-full blur-[80px] pointer-events-none"></div>
 
         <div className="relative z-10 max-w-xl flex-1">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 mb-5 rounded-full bg-white/5 border border-white/[0.08] text-xs font-medium text-blue-400 shadow-inner">
-            <Sparkles className="w-3.5 h-3.5 text-blue-400 animate-pulse" />
-            Empowered by Gemini 3.5 Flash
-          </div>
           <h1 className="text-3xl md:text-4xl font-display font-semibold tracking-tight text-white mb-3">
             Your Full-Stack AI Development Companion
           </h1>
