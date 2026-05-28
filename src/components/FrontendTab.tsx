@@ -71,7 +71,7 @@ export default function FrontendTab({ onSaveSnippet, initialPrompt }: FrontendTa
   const [loading, setLoading] = useState(false);
   const [loadingStep, setLoadingStep] = useState(0);
   const [response, setResponse] = useState<FrontendComponentResponse | null>(null);
-  const [activeTabType, setActiveTabType] = useState<'preview' | 'code' | 'concept'>('preview');
+  const [activeTabType, setActiveTabType] = useState<'preview' | 'code'>('preview');
   const [selectedFile, setSelectedFile] = useState<'index.html' | 'styles.css' | 'script.js'>('index.html');
   const [modifyPrompt, setModifyPrompt] = useState('');
   const [copied, setCopied] = useState(false);
@@ -501,16 +501,6 @@ ${prompt}
                     >
                       📂 File Directory Code
                     </button>
-                    <button
-                      onClick={() => setActiveTabType('concept')}
-                      className={`px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider transition-all cursor-pointer ${
-                        activeTabType === 'concept'
-                          ? 'bg-gradient-to-r from-[#ff007a] to-[#ef4444] text-white shadow-md shadow-pink-500/10 border border-white/10'
-                          : 'text-slate-400 hover:text-slate-200'
-                      }`}
-                    >
-                      💡 Architectural Concept
-                    </button>
                   </div>
 
                   <span className="text-[9px] font-mono font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-lg">
@@ -577,17 +567,6 @@ ${prompt}
                           <pre className="whitespace-pre">{response.js || '// Event controllers binding listeners dynamically'}</pre>
                         )}
                       </div>
-                    </div>
-                  )}
-
-                  {activeTabType === 'concept' && (
-                    <div className="bg-[#050507] p-5 rounded-xl border border-white/10 overflow-y-auto max-h-[360px] text-left text-slate-300 text-xs leading-relaxed select-text space-y-3">
-                      <div className="flex items-center gap-2 text-pink-400 font-bold uppercase tracking-wider text-[10px] font-mono">
-                        <span>🚀</span> UX Wireframe Architecture Summary
-                      </div>
-                      <p className="text-slate-300 font-light whitespace-pre-line">
-                        {response.explanation}
-                      </p>
                     </div>
                   )}
                 </div>
